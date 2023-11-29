@@ -7,4 +7,4 @@ This changelog follows [the Keep a Changelog standard](https://keepachangelog.co
 
 ## 1.0.0 (2023-11-29)
 
-First release.
+- First release.
