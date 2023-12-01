@@ -19,7 +19,7 @@ final class FlowbiteBladeIconsServiceProvider extends ServiceProvider
 
             $factory->add('flowbiteicons', array_merge(['path' => __DIR__.'/../resources/svg'], $config));
             //             Extra prefix
-            $factory->add('fwb-icons', array_merge([
+            $factory->add('flowbite-icons', array_merge([
                 'path' => __DIR__.'/../resources/svg'],
                 collect($config)->put('prefix', 'fwb')->toArray()
             ));
