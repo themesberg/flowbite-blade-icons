@@ -28,7 +28,10 @@ return collect([
     'after' => static function (string $icon, array $config, SplFileInfo $file) {
         $fileContents = file_get_contents($icon);
         $fileContents = str_replace('fill="#2F2F38" ', '', $fileContents);
-        $fileContents = str_replace('fill="none"', 'fill="currentColor"', $fileContents);
+        $fileContents = str_replace('fill="#2F2F38"', '', $fileContents);
+        if($config['output-prefix'] === 's-') {
+            $fileContents = str_replace('fill="none"', 'fill="currentColor"', $fileContents);
+        }
         file_put_contents($icon, $fileContents);
     },
 ])->toArray();
